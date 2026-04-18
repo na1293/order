@@ -1,0 +1,11 @@
+{
+    "1": [
+        { "name": "Mỳ gà cay", "qty": 1, "price": 35000 },
+        { "name": "Cơm", "qty": 1, "price": 5000 },
+        { "name": "Trứng", "qty": 1, "price": 5000 }
+    ],
+    "2": [
+        { "name": "Mỳ sườn", "qty": 1, "price": 40000 },
+        { "name": "Trà tắc", "qty": 1, "price": 15000 }
+    ]
+}

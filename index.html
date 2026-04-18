@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/mobile.css">
+    <link rel="stylesheet" href="CSS/food.css">
+    <link rel="stylesheet" href="CSS/order.css">
+    <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="CSS/text.css">
+    <link rel="stylesheet" href="CSS/element.css">
+    <link rel="stylesheet" href="CSS/color.css">
+    <script src="script.js" defer></script>
+    <script src="load.js" defer></script>
+    <script src="order.js" defer></script>
+    <script src="menu.js" defer></script>
+    <script src="render_after_order.js" defer></script>
+    <script src="order-gr.js" defer></script>
+</head>
+<body>
+    <button class="menu-button" id="info">Xem món ăn</button>
+    <div class="content">
+        <div class="can">
+            <div class="tieu-de">
+                <h1>Hôm nay bạn muốn ăn gì?</h1>
+                <h2>Ăn <span style="color:#ffb703">tẹt ga</span>. Chỉ cần bạn <span style="color: #ffb703;">thích</span>.</h2>
+                <button class="button-full" id="info-2">Chọn đặt món</button>
+                <button class="button-border" id="resetData">Tạo phiên mới</button>
+                <!-- <button onclick="dat_nhom()">test</button> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="box-vuong">
+        <div class="food-container" id="main-info">
+            <div class="content">
+                <h2 style="font-size: 50px;">Càng ăn càng ngon</h2>
+                <div class="box-menu">
+                    <p style="font-size: 30px;"><a href="#noodles">Các món mỳ</a></p>
+                    <p style="font-size: 30px;"><a href="#rice">Món cơm</a></p>
+                    <p style="font-size: 30px;"><a href="#kimbap">Cơm cuộn Hàn Quốc</a></p>
+                    <p style="font-size: 30px;"><a href="#tokbokki">Tokbokki</a></p>
+                    <p style="font-size: 30px;"><a href="#drinks">Đồ uống</a></p>
+                    <p style="font-size: 30px;"><a href="#topping">Topping</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main" id="order-box">
+        <div class="content">
+            <div class="tieu-de">
+                <span id="title-order-nav">
+                    <h2>Ăn gì cũng nghiền.</h2>
+                    <h3>Chọn hương vị yêu thích</h3>
+                </span>
+            </div>
+        </div>
+
+        <div class="food-section">
+            <div class="food-color-card">
+                <div class="food-container">
+                    <div class="content">
+                        <div id="order" class="food-container">
+                            <div class="box-food">
+                                <img src="" alt="">
+                                <p class="food-name"></p>
+                                <p class="food-description"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="can-giua-pt" id="Nextbtn" style="display: none;">
+                <button class="button-full" onclick="topping()">Tiếp theo</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main" id="order-topping">
+        <div class="box"></div>
+    </div>
+
+    <div class="content">
+        <p></p>
+    </div>
+
+    <div id="pay" style="display: none;">
+        <div id="nav-pay">
+        </div>
+    </div>
+
+    <div class="can-giua-pt">
+        <button class="button-full" onclick="dat_nhom()">Xem món ăn</button>
+    </div>
+
+</body>
+</html>

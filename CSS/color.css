@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Dancing+Script:wght@700&display=swap');
+
+.food-section {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    /* Màu nền gradient ấm áp, cảm giác như bếp lửa mướt mườn mượt */
+    background: linear-gradient(135deg,#ffb703 0%, #fb8500 55%, #d62828 100%);
+    border-radius: 30px;
+    font-family: 'Fredoka', sans-serif;
+    color: white;
+}
+
+.food-color-card h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #ffce67;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Container để căn giữa cái card */
+.food-container {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các món tự xuống hàng */
+    gap: 20px;       /* Khoảng cách giữa các món */
+    padding: 20px;
+    justify-content: center;
+}
+
+.food-box-menu {
+    width: 280px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.food-box-menu:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 165, 0, 0.2);
+}
+
+/* ẢNH MÓN - Thêm hiệu ứng zoom nhẹ khi hover */
+.food-box-menu img, .box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 25px;
+    transform: scale(1.09);
+    transition: transform 0.5s ease;
+}
+
+.food-box-menu:hover img {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
+
+/* NỘI DUNG */
+.food-info {
+    padding: 20px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.food-box-menu strong {
+    display: block;
+    font-size: 22px;
+    color: #2d3436;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.food-box-menu p {
+    margin: 0;
+    font-size: 14px;
+    color: #636e72;
+    font-weight: 400;
+}
+
+.food-box-menu .price {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #d63031; /* Đỏ ớt kích thích */
+}

@@ -1,0 +1,261 @@
+@media (max-width: 768px) {
+    html, body {
+    height: 100%;
+    margin: 0;         /* Bỏ margin mặc định của body */
+    padding: 0;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+    }
+
+    /* Nút mở menu*/
+    .menu-toggle {
+        font-size: 24px;
+        padding: 16px;
+        cursor: pointer;
+        z-index: 1001;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        border: none;
+        gap: 6px;
+        transition: all 0.3s ease; /* Thêm transition cho nút toggle */
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #1d1d1f;
+        transition: all 0.3s ease;
+    }
+
+    /* Khi menu active, nút toggle sẽ biến thành dấu X */
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Overlay menu */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        z-index: 1000;
+        transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm transition cho box-shadow */
+        overflow-x: hidden;
+    }
+
+    .menu-overlay.active {
+        width: 100%;
+        padding: 24px;
+        box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-close {
+        font-size: 32px;
+        align-self: flex-end;
+        cursor: pointer;
+        margin-bottom: 24px;
+        color: #1d1d1f;
+        font-family: sans-serif;
+        transition: color 0.2s ease; /* Thêm transition cho màu */
+    }
+    .menu-close:hover {
+        color: #0071e3; /* Đổi màu khi hover */
+    }
+
+
+    /* Menu item */
+    .menu-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        font-size: 20px;
+        font-weight: 500;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .menu-nav a {
+        text-decoration: none;
+        color: #1d1d1f;
+        padding: 12px 0; /* Tăng padding để dễ chạm hơn và trông thoáng hơn */
+        border-bottom: 1px solid #eeeeee;
+        transition: color 0.2s ease, background-color 0.2s ease, padding-left 0.2s ease; /* Thêm transition cho padding-left */
+        position: relative; /* Quan trọng để tạo hiệu ứng gạch chân */
+        overflow: hidden; /* Ẩn phần gạch chân tràn ra */
+        display: block; /* Đảm bảo link chiếm hết chiều rộng để padding hoạt động */
+    }
+
+    .menu-nav a:last-child {
+        border-bottom: none;
+    }
+
+    .menu-nav a:hover {
+        color: #0071e3;
+        background-color: #f0f0f5; /* Thêm màu nền nhạt khi hover */
+        padding-left: 10px; /* Hiệu ứng trượt nhẹ sang phải khi hover */
+    }
+
+    /* Hiệu ứng gạch chân khi hover (kiểu hiện đại) */
+    .menu-nav a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #0071e3;
+        transition: width 0.3s ease;
+    }
+
+    .menu-nav a:hover::before {
+        width: 100%;
+    }
+
+    /* Ẩn menu desktop trên mobile */
+    .menu-nav-box {
+        display: none;
+    }
+
+    .box {
+        display: inline-block;
+        width: 85%;
+        height: auto;
+        margin-right: 10px;
+    
+        scroll-snap-align: start; /* Cho snap nếu muốn */
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+        margin: 5px;
+        padding: 20px;
+    }
+
+    .box h2 {
+        font-size: 22px;
+    }
+
+    .box #spa-icon,
+    .box #crown-icon,
+    .box #diamond-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .image-side, .content-side {
+        flex: 1 1 100%;
+        box-sizing: border-box;
+    }
+
+    .image-side {
+        height: 300px; /* hoặc dùng 50vh */
+        overflow: hidden;
+    }
+
+    .image-side img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .content-side {
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .top-text {
+        position: absolute;
+        top: 520px;
+        left: 10px;
+        z-index: 999;
+    }
+
+    .mt {
+        display: flex;
+        height: 200px; /* tuỳ ý: 20px, 50px... */
+    }
+
+    .food-container {
+        display: flex;
+        justify-content: center; /* Căn giữa các món ăn */
+        flex-wrap: wrap;        /* QUAN TRỌNG: Để món ăn tự xuống hàng */
+        gap: 25px;              /* Khoảng cách giữa các thẻ món ăn */
+        margin-top: 30px;
+        padding: 20px;
+        width: 100%;            /* Đảm bảo chiếm hết chiều rộng */
+    }
+}
+/* Mobile */
+@media (max-width: 768px) {
+.select {
+    top: auto;
+    bottom: 20px;  /* ghim dưới cùng dễ bấm */
+    padding: 12px;
+    font-size: 14px;
+}
+
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+.select {
+    top: 650px;
+    padding: 20px;
+}
+}
+
+@media (max-width: 768px) {
+.thong-bao {
+    width: 85%;
+    height: 75%;
+    left: 5%;
+    transform: none;
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 12px;
+}
+
+.input {
+    font-size: 15px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    width: 80%;
+    margin: 0 14px 16px;
+}
+}
