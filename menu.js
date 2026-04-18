@@ -28,6 +28,13 @@ menu = {
             "description": "Mỳ Spagetti với nước sốt cà chua thơm ngon. Có thể mua kèm Topping.",
             "image": "img/spaghetti.jpg"
         },
+        "5": {
+            "name": "Mỳ tương đen",
+            "price": "10.000 VND",
+            "price_backend": 10000,
+            "description": "Mỳ tương đen - Xuất xứ từ Incheon, Hàn Quốc. Hương vị đậm đà, mặn ngọt đắng hài hòa, béo ngậy.",
+            "image": "img/black_bean_noodles.jpg"
+        }
     },
     "rice": {
         "1": {
