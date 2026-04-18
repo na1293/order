@@ -1,16 +1,7 @@
 // Chỉ xử lý phần id và di chuyển
-
-const openid = ["#main-info"];
-let info = document.getElementById("info");
+const openid = ["#main-info"]; // Khai báo di chuyển đến main-info
 let info2 = document.getElementById("info-2");
 let count_info = 0;
-info.addEventListener("click", function() {
-    const target = document.querySelector(openid[count_info]);
-    target.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-    });
-});
 info2.addEventListener("click", function() {
     const target = document.querySelector(openid[count_info]);
     target.scrollIntoView({ 

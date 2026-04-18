@@ -60,6 +60,7 @@ function topping() {
             const done = confirm("Bạn đã đặt xong?")
             if (done) {
                 di_chuyen_xuong();
+                dat_nhom();
             }
         }
         

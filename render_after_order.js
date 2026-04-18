@@ -47,8 +47,6 @@ function confirmOrder(NameFoods) {
     if (statusElement) {
         statusElement.innerText = `Bạn đang có ${quantity} món này`;
     }
-
-    alert(`Xác nhận thành công! ✅\nGiá mỗi phần: ${priceForBackend.toLocaleString()} VND`);
 }
 
 // =========== Xóa món =================

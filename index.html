@@ -18,9 +18,16 @@
     <script src="menu.js" defer></script>
     <script src="render_after_order.js" defer></script>
     <script src="order-gr.js" defer></script>
+    <script src="popup_Menu.js" defer></script>
 </head>
 <body>
-    <button class="menu-button" id="info">Xem món ăn</button>
+    <button class="menu-button" onclick="show_help()">Quay về</button>
+    <div class="content">
+        <div class="menu-order" id="menu-popup">
+            <a href="#main-info">Xem các món ăn</a>
+            <a href="#Nextbtn">Món tiếp theo</a>
+        </div>
+    </div>
     <div class="content">
         <div class="can">
             <div class="tieu-de">
@@ -77,7 +84,7 @@
             </div>
 
             <div class="can-giua-pt" id="Nextbtn" style="display: none;">
-                <button class="button-full" onclick="topping()">Tiếp theo</button>
+                <button class="btn-signature" onclick="topping()">Tiếp theo</button>
             </div>
 
         </div>
