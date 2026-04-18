@@ -1,3 +1,5 @@
+// Chỉ xử lý phần id và di chuyển
+
 const openid = ["#main-info"];
 let info = document.getElementById("info");
 let info2 = document.getElementById("info-2");

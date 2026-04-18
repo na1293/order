@@ -1,11 +1,18 @@
+// Xử lý cuối cùng
+
 function dat_nhom() {
-    // 1. Hiển thị khu vực thanh toán
+    // 1. Hiển thị khu vực tính toán tiền
     const pay = document.getElementById("pay");
     pay.style.display = "block";
 
     // 2. Lấy dữ liệu từ bộ nhớ
     const currentOrder = JSON.parse(localStorage.getItem('currentOrder')) || [];
     let orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+
+    if (currentOrder.length <= 0) {
+        alert("Đơn hàng tối thiểu 5.000đ để tiến hành đặt");
+        return;
+    }
 
     // 3. LOGIC QUAN TRỌNG: Chỉ đóng gói nếu currentOrder có món
     if (currentOrder.length > 0) {
@@ -48,8 +55,8 @@ function dat_nhom() {
 
     nav_pay.innerHTML = finalHtml;
 
-    // Alert để debug (có thể xóa sau)
-    if (currentOrder.length > 0) {
-        alert("Đã lưu vào nhóm mới và làm sạch giỏ hàng!");
-    }
+    const preview = document.getElementById("preview-end-page");
+    preview.scrollIntoView({ behavior: 'smooth' });
+    const price_check = price.toLocaleString();
+    alert(price_check)
 }

@@ -1,8 +1,10 @@
-function confirmOrder(NameFoods) {
-    const quantityInput = document.getElementById(`quantity-${NameFoods}`);
-    const statusElement = document.getElementById(`status-${NameFoods}`);
-    const quantity = parseInt(quantityInput.value);
+// CÓ HỖ TRỢ XÓA MÓN VÀ THÊM MÓN
 
+// ========= Thêm món ==========
+function confirmOrder(NameFoods) {
+    const quantityInput = document.getElementById(`quantity-${NameFoods}`); // Lấy dữ liệu từ ô nhập
+    const statusElement = document.getElementById(`status-${NameFoods}`); // Toàn bộ cái thẻ thông báo
+    const quantity = parseInt(quantityInput.value); // Lấy số món đang có trên thanh nhập
     // --- BƯỚC TÌM GIÁ TỪ MENU ---
     let priceForBackend = 0;
     
@@ -16,17 +18,9 @@ function confirmOrder(NameFoods) {
         }
     }
 
-    // 1. Xử lý gỡ món khi số lượng <= 0
+    // 1. Xử lý khi món trên thanh nhập <= 0
     if (isNaN(quantity) || quantity <= 0) {
-        const shouldRemove = confirm(`Bạn có muốn gỡ phần ${NameFoods}?`);
-        if (shouldRemove) {
-            let currentOrder = JSON.parse(localStorage.getItem("currentOrder")) || [];
-            currentOrder = currentOrder.filter(item => item.name !== NameFoods);
-            localStorage.setItem("currentOrder", JSON.stringify(currentOrder));
-            
-            if (statusElement) statusElement.innerText = `Bạn đang có 0 món`;
-            alert(`Đã gỡ phần ${NameFoods}.`);
-        }
+        alert("Ôi! bạn cần nhập số lượng món trên 0 nha.")
         return;
     }
 
@@ -51,8 +45,36 @@ function confirmOrder(NameFoods) {
     
     // 4. Cập nhật UI
     if (statusElement) {
-        statusElement.innerText = `Bạn đang có ${quantity} món`;
+        statusElement.innerText = `Bạn đang có ${quantity} món này`;
     }
 
     alert(`Xác nhận thành công! ✅\nGiá mỗi phần: ${priceForBackend.toLocaleString()} VND`);
+}
+
+// =========== Xóa món =================
+function remove_food(name_food_remove) {
+    // 1. Chỉ lấy statusElement để cập nhật UI
+    const statusElement = document.getElementById(`status-${name_food_remove}`);
+    const quantityInput = document.getElementById(`quantity-${name_food_remove}`);
+
+    // 2. Xác nhận xóa
+    const shouldRemove = confirm(`Bạn có muốn gỡ phần ${name_food_remove}?`);
+    
+    if (shouldRemove) {
+        // 3. Lấy dữ liệu và ép kiểu mảng (phòng thủ)
+        let currentOrder = JSON.parse(localStorage.getItem("currentOrder"));
+        if (!Array.isArray(currentOrder)) currentOrder = [];
+
+        // 4. Lọc bỏ món ăn
+        currentOrder = currentOrder.filter(item => item.name !== name_food_remove);
+
+        // 5. LƯU LẠI CẢ MẢNG (QUAN TRỌNG NHẤT) ✨
+        localStorage.setItem("currentOrder", JSON.stringify(currentOrder));
+        
+        // 6. Cập nhật UI
+        if (statusElement) statusElement.innerText = `Bạn đang có 0 món`;
+        if (quantityInput) quantityInput.value = 0; // Reset ô nhập về 0 cho đẹp
+        
+        alert(`Đã gỡ phần ${name_food_remove} thành công! ✅`);
+    }
 }

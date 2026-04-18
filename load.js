@@ -42,23 +42,33 @@ let countStage = 0;
 function topping() {
     const orderTopping = document.querySelector("#order-topping");
     const orderBox = document.querySelector("#order-box");
+    const orderSection = document.querySelector("#title-order-nav");
+    const preview = document.getElementById("preview-end-page");
 
     // if (orderBox) orderBox.style.display = "none"; // Ẩn món chính
     if (orderTopping) {
         orderTopping.style.display = "flex"; // Hiện khu vực topping
         if (countStage === 0) {
+            di_chuyen_len()
             render('#topping');
             countStage += 1;
         } else if (countStage === 1) {
+            di_chuyen_len()
             render('#drinks');
             countStage += 1;
         } else {
             const done = confirm("Bạn đã đặt xong?")
             if (done) {
-                // dat_nhom() // Chuyển đến trang tính tiền (Ước tính)
+                di_chuyen_xuong();
             }
         }
         
-        orderTopping.scrollIntoView({ behavior: 'smooth' });
+        function di_chuyen_len() {
+            orderSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function di_chuyen_xuong() {
+            preview.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 }

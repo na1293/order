@@ -1,3 +1,5 @@
+// Hàm render từng phần tử box đồ ăn
+
 function render(name) {
     const categoryKey = name.substring(1); 
     const categoryData = menu[categoryKey]; 
@@ -8,10 +10,12 @@ function render(name) {
             const currentOrder = JSON.parse(localStorage.getItem("currentOrder")) || [];
 
             const htmlContent = Object.values(categoryData).map(food => {
-                const existingItem = currentOrder.find(item => item.name === food.name); // Map tên món để render từ bộ nhớ (Kỹ thuật ánh xạ)
-                console.log(existingItem) // Hiểu về nguyên lý
-                const quantityInCart = existingItem ? existingItem.quantity : 0; // Kiểm tra điều kiện => Lấy phần quantity (Số lượng) trong existingItem
-                // === currentOrder là vùng nhớ chính === //
+                const existingItem = currentOrder.find(item => item.name === food.name);
+                const quantityInCart = existingItem ? existingItem.quantity : 0;
+
+                // 1. Kiểm tra xem món này có phải là rau không (Không phân biệt hoa thường)
+                const isRau = food.name.toLowerCase().includes("rau");
+
                 return `
                     <div class="food-box-menu">
                         <img src="${food.image}" loading="lazy" alt="${food.name}">
@@ -21,23 +25,32 @@ function render(name) {
                             
                             <div class="price-row">
                                 <span class="price">${food.price}</span>
-                                <br>
-                                <button class="button-border" onclick="confirmOrder('${food.name}')">
-                                    Thêm món
-                                </button>
                             </div>
 
                             <div class="food-status-area">
                                 <div class="can-giua-pt">
-                                    <div class="quantity-stepper">
-                                        <button type="button" class="btn-step" onclick="this.parentNode.querySelector('input').stepDown()">−</button>
-                                        <input type="number" id="quantity-${food.name}" min="0" value="${quantityInCart}" class="input-UI">
-                                        <button type="button" class="btn-step" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
-                                    </div>
+                                    ${isRau ? `
+                                        <div>Rau sạch miễn phí</div>
+                                        <input type="hidden" id="quantity-${food.name}" value="1">
+                                    ` : `
+                                        <div class="quantity-stepper">
+                                            <button type="button" class="btn-step" onclick="this.parentNode.querySelector('input').stepDown()">−</button>
+                                            <input type="number" id="quantity-${food.name}" min="0" value="${quantityInCart}" class="input-UI">
+                                            <button type="button" class="btn-step" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
+                                        </div>
+                                    `}
                                 </div>
 
-                                <p id="status-${food.name}">Đang có: ${quantityInCart}</p>
+                                <p id="status-${food.name}">${isRau && quantityInCart > 0 ? 'Đã thêm rau' : `Đang có: ${quantityInCart}`}</p>
+                                <hr>
+                                
+                                <button class="button-border" onclick="confirmOrder('${food.name}')">
+                                    ${isRau ? 'Lấy rau' : 'Thêm món'}
+                                </button>
 
+                                <button class="button-border" onclick="remove_food('${food.name}')">
+                                    Xóa
+                                </button>
                             </div>
                         </div>
                     </div>`;

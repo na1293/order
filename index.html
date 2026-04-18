@@ -26,6 +26,8 @@
             <div class="tieu-de">
                 <h1>Hôm nay bạn muốn ăn gì?</h1>
                 <h2>Ăn <span style="color:#ffb703">tẹt ga</span>. Chỉ cần bạn <span style="color: #ffb703;">thích</span>.</h2>
+            </div>
+            <div class="can-giua-pt gap">
                 <button class="button-full" id="info-2">Chọn đặt món</button>
                 <button class="button-border" id="resetData">Tạo phiên mới</button>
                 <!-- <button onclick="dat_nhom()">test</button> -->
@@ -51,8 +53,8 @@
 
     <div class="main" id="order-box">
         <div class="content">
-            <div class="tieu-de">
-                <span id="title-order-nav">
+            <div class="tieu-de" id="title-order-nav">
+                <span>
                     <h2>Ăn gì cũng nghiền.</h2>
                     <h3>Chọn hương vị yêu thích</h3>
                 </span>
@@ -89,14 +91,20 @@
         <p></p>
     </div>
 
+    <div class="can-giua-pt" id="preview-end-page">
+        <div class="box-vuong">
+            <div class="content">
+                <div class="tieu-de">
+                    <h3>Bạn đã đặt xong? Bấm vào đây để xem lại các danh sách món ăn.</h3>
+                    <button class="button-full" onclick="dat_nhom()">Hoàn thành</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="pay" style="display: none;">
         <div id="nav-pay">
         </div>
     </div>
-
-    <div class="can-giua-pt">
-        <button class="button-full" onclick="dat_nhom()">Xem món ăn</button>
-    </div>
-
 </body>
 </html>

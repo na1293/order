@@ -64,6 +64,10 @@ html {
     padding: 20px;
 }
 
+.gap {
+    gap: 20px;
+}
+
 .section {
   display: flex;
   flex-wrap: wrap;
