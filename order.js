@@ -28,8 +28,16 @@ function render(name) {
                             </div>
 
                             <div class="food-status-area">
+                                <div class="can-giua-pt">
+                                    <div class="quantity-stepper">
+                                        <button type="button" class="btn-step" onclick="this.parentNode.querySelector('input').stepDown()">−</button>
+                                        <input type="number" id="quantity-${food.name}" min="0" value="${quantityInCart}" class="input-UI">
+                                        <button type="button" class="btn-step" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
+                                    </div>
+                                </div>
+
                                 <p id="status-${food.name}">Đang có: ${quantityInCart}</p>
-                                <input type="number" id="quantity-${food.name}" min="1" value="1" class="input-UI">
+
                             </div>
                         </div>
                     </div>`;

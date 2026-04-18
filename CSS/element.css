@@ -145,3 +145,54 @@ html {
     max-width: 500px;
     transform: translateY(0) scale(0.98);
 }
+
+/* ===== */
+
+.quantity-stepper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: fit-content;
+    overflow: hidden;
+    background: #fff;
+}
+
+.btn-step {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+}
+
+.btn-step:hover {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.btn-step:active {
+    background-color: #e0e0e0;
+}
+
+.input-UI {
+    width: 45px;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    -moz-appearance: textfield; /* Ẩn mũi tên mặc định trên Firefox */
+}
+
+/* Ẩn mũi tên mặc định của input number trên Chrome/Safari */
+.input-UI::-webkit-outer-spin-button,
+.input-UI::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

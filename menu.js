@@ -149,10 +149,17 @@ menu = {
             "image": "img/teago.jpg"
         },
         "4": {
-            "name": "Trà hoa quả",
-            "price": "15.000 VND đến 20.000 VND",
+            "name": "Trà hoa quả nhỏ",
+            "price": "15.000 VND",
             "price_backend": 15000, 
             "description": "Trà hoa quả thơm ngon, giải khát tuyệt vời cho ngày hè.",
+            "image": "img/tea_fruit.jpg"
+        },
+        "5": {
+            "name": "Trà hoa quả lớn",
+            "price": "20.000 VND",
+            "price_backend": 20000, 
+            "description": "Trà hoa quả loại lớn, rất thơm ngon, giải khát tuyệt vời cho ngày hè.",
             "image": "img/tea_fruit.jpg"
         }
     },

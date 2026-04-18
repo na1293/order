@@ -55,5 +55,4 @@ function confirmOrder(NameFoods) {
     }
 
     alert(`Xác nhận thành công! ✅\nGiá mỗi phần: ${priceForBackend.toLocaleString()} VND`);
-    quantityInput.value = 1; 
 }
