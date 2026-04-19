@@ -20,7 +20,7 @@ function confirmOrder(NameFoods) {
 
     // 1. Xử lý khi món trên thanh nhập <= 0
     if (isNaN(quantity) || quantity <= 0) {
-        alert("Ôi! bạn cần nhập số lượng món trên 0 nha.")
+        remove_food(NameFoods);
         return;
     }
 

@@ -4,35 +4,35 @@ menu = {
             "name": "Mỳ vị sường cay ngọt",
             "price": "10.000 VND",
             "price_backend": 10000,
-            "description": "Mỳ này có nước sốt vị cay nhẹ và ngọt. Có thể mua kèm Topping.",
+            "description": "[Chỉ mỳ] Mỳ này có nước sốt vị cay nhẹ và ngọt. Có thể mua kèm Topping.",
             "image": "img/noodles.jpg"
         },
         "2": {
             "name": "Mỳ vị gà cay",
             "price": "10.000 VND",
             "price_backend": 10000,
-            "description": "Mỳ này có nước sốt rất cay và đậm vị. Có thể mua kèm Topping.",
+            "description": "[Chỉ mỳ] Mỳ này có nước sốt rất cay và đậm vị. Có thể mua kèm Topping.",
             "image": "img/noodles.jpg"
         },
         "3": {
             "name": "Mỳ nước",
             "price": "10.000 VND",
             "price_backend": 10000,
-            "description": "Mỳ pha sẵn với nước nóng. Chọn thêm topping.",
+            "description": "[Chỉ mỳ] Mỳ pha sẵn với nước nóng. Chọn thêm topping.",
             "image": "img/noodles_hot.jpg"
         },
         "4": {
             "name": "Mỳ spaghetti",
             "price": "10.000 VND",
             "price_backend": 10000,
-            "description": "Mỳ Spagetti với nước sốt cà chua thơm ngon. Có thể mua kèm Topping.",
+            "description": "[Chỉ mỳ] Mỳ Spagetti với nước sốt cà chua thơm ngon. Có thể mua kèm Topping.",
             "image": "img/spaghetti.jpg"
         },
         "5": {
             "name": "Mỳ tương đen",
             "price": "10.000 VND",
             "price_backend": 10000,
-            "description": "Mỳ tương đen - Xuất xứ từ Incheon, Hàn Quốc. Hương vị đậm đà, mặn ngọt đắng hài hòa, béo ngậy.",
+            "description": "[Chỉ mỳ] Mỳ tương đen - Xuất xứ từ Incheon, Hàn Quốc. Hương vị đậm đà, mặn ngọt đắng hài hòa, béo ngậy.",
             "image": "img/black_bean_noodles.jpg"
         }
     },
@@ -165,7 +165,7 @@ menu = {
     },
     "tokbokki": {
         "1": {
-            "name": "Tokbokki truyền thống",
+            "name": "[Chỉ Tokbokki] Tokbokki truyền thống",
             "price": "10.000 VND",
             "price_backend": 10000,
             "description": "Tokbokki truyền thống với nước sốt tray ngọt đặc trưng, gồm bánh gạo mềm mịn và các loại rau củ.",
