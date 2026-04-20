@@ -171,5 +171,35 @@ menu = {
             "description": "Tokbokki truyền thống với nước sốt tray ngọt đặc trưng, gồm bánh gạo mềm mịn và các loại rau củ.",
             "image": "img/tokbokki.jpg"
         }
+    },
+    "more": {
+        "1": {
+            "name": "Tương ớt",
+            "price": "Miễn phí",
+            "price_backend": 0,
+            "description": "Tương ớt cho vào món ăn. (Giá trị trên 0 được hiểu là 'có')",
+            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Tương+ớt"
+        },
+        "2": {
+            "name": "Tương cà",
+            "price": "Miễn phí",
+            "price_backend": 0,
+            "description": "Tương cà cho vào món ăn. (Giá trị trên 0 được hiểu là 'có')",
+            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Tương+cà"
+        },
+        "3": {
+            "name": "Sốt Mayonnaise",
+            "price": "Miễn phí",
+            "price_backend": 0,
+            "description": "Sốt Mayonnaise cho vào món ăn. (Giá trị trên 0 được hiểu là 'có')",
+            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Sốt+Mayonnaise"
+        },
+        "4": {
+            "name": "Bim bim",
+            "price": "5.000 VND",
+            "price_backend": 5000,
+            "description": "[Chỉ bim bim] Gói bim bim ăn vặt",
+            "image": "img/bim-bim.jpg"
+        }
     }
 }

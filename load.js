@@ -56,6 +56,10 @@ function topping() {
             di_chuyen_len()
             render('#drinks');
             countStage += 1;
+        } else if (countStage === 2) {
+            di_chuyen_len()
+            render('#more');
+            countStage += 1;
         } else {
             const done = confirm("Bạn đã đặt xong?")
             if (done) {
