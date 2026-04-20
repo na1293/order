@@ -1,3 +1,4 @@
+/* Body giữ nguyên của ông */
 body {
     overflow-x: hidden; 
     transition: filter 0.3s ease; 
@@ -7,9 +8,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #FF8A00; /* Màu cam thương hiệu của ông */
+    width: 100%;
+    height: 100%;
+    background-color: #FF8A00; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,37 +19,45 @@ body {
 }
 
 .splash-content {
+    width: 100%; /* Cho phép nội dung dàn hàng ngang */
+    max-width: 600px; /* Giới hạn để không bị to quá trên màn hình máy tính */
+    padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: zoomIn 1s ease-out; /* Thêm tí hiệu ứng lúc mới hiện */
 }
 
 .logo-wrapper {
-    width: 120px;
-    height: 120px;
+    width: 60vw; /* To theo chiều rộng màn hình (view-width) */
+    max-width: 300px; /* Không cho to quá 300px để giữ sự tinh tế */
+    aspect-ratio: 1 / 1; /* Luôn giữ hình vuông */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 20px;
-    overflow: hidden; /* Cắt ảnh thừa để logo tròn xoe */
+    margin-bottom: 30px;
+    /* Loại bỏ overflow hidden nếu muốn ảnh đổ bóng hoặc hiệu ứng bay bổng */
 }
 
 .logo-wrapper img {
-    width: 80%; /* Để logo nhỏ gọn bên trong vòng tròn trắng */
-    height: auto;
-    border-radius: 25%; /* Bo tròn tuyệt đối */
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Đảm bảo ảnh không bị méo, giữ đúng tỉ lệ */
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15)); /* Đổ bóng nhẹ cho sang */
 }
 
 .slogan {
     color: white;
     font-family: 'Arial', sans-serif;
-    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 4vw, 1.8rem); /* Chữ tự co giãn theo màn hình */
     font-weight: 600;
-    line-height: 1.5;
     margin: 0;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    opacity: 0.9;
 }
 
-.slogan span {
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* Hiệu ứng Zoom nhẹ lúc mở app cho chuyên nghiệp */
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
