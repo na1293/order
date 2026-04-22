@@ -1,11 +1,13 @@
+// === File đầu tiên ===
+
 // === Chuyên xử lý event click từ HTML
 
 // 1. Chọn tất cả các link dẫn đến một ID (bắt đầu bằng #)
 // Bạn có thể thêm class cho các link menu để chọn chính xác hơn, ví dụ: 'a.menu-link'
 const links = document.querySelectorAll('a[href^="#"]');
 
-links.forEach(link => {
-    link.addEventListener('click', function(e) {
+links.forEach(link => { // Lấy id trên thanh URL (VD: #topping)
+    link.addEventListener('click', function(e) { // Nhận từ thẻ a khi phát hiện click
         const Nextbtn = document.getElementById("Nextbtn");
         if (Nextbtn) Nextbtn.style.display = "block"; // Hiện nút "Tiếp theo" khi click vào menu
         const id = this.getAttribute('href'); 
@@ -23,7 +25,7 @@ links.forEach(link => {
             }
 
             // Render dữ liệu linh hoạt theo ID
-            render(id);
+            render(id); 
 
             // Cuộn trang mượt mà
             const orderSection = document.querySelector("#title-order-nav");

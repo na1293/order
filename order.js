@@ -11,19 +11,13 @@ function render(name) {
             const htmlContent = Object.values(categoryData).map(food => {
                 const existingItem = currentOrder.find(item => item.name === food.name);
                 const quantityInCart = existingItem ? existingItem.quantity : 0;
-                const isRau = food.name.toLowerCase().includes("rau");
+                const isRau = /rau|tương|sốt/i.test(food.name);
 
-                // Sử dụng Template String để tạo HTML
                 return `
                     <div class="food-box-menu">
-                        <img 
-                            src="${food.image}" 
-                            loading="lazy" 
-                            decoding="async" 
-                            alt="${food.name}"
-                            style="background: #f0f0f0;" 
-                            onerror="this.onerror=null; this.src='https://dummyimage.com/300x300/ff7f00/fff.png&text=Lỗi+Ảnh';"
-                        >
+                        <img src="${food.image}" loading="lazy" decoding="async" alt="${food.name}"
+                            onerror="this.onerror=null; this.src='https://dummyimage.com/300x300/ff7f00/fff.png&text=Lỗi+Ảnh';">
+                        
                         <div class="food-info">
                             <strong>${food.name}</strong>
                             <p>${food.description}</p>
@@ -34,27 +28,30 @@ function render(name) {
 
                             <div class="food-status-area">
                                 <div class="can-giua-pt">
-                                    ${isRau ? `
-                                        <div>Rau sạch miễn phí</div>
-                                        <input type="hidden" id="quantity-${food.name}" value="1">
-                                    ` : `
-                                        <div class="quantity-stepper">
-                                            <button type="button" class="btn-step" 
-                                                onclick="const input = this.parentNode.querySelector('input'); input.stepDown(); confirmOrder('${food.name}')">
-                                                −
-                                            </button>
-                                            
-                                            <input type="number" id="quantity-${food.name}" min="0" value="${quantityInCart}" class="input-UI" readonly>
-                                            
-                                            <button type="button" class="btn-step" 
-                                                onclick="const input = this.parentNode.querySelector('input'); input.stepUp(); confirmOrder('${food.name}')">
-                                                +
-                                            </button>
-                                        </div>
-                                    `}
+                                    <div class="quantity-stepper">
+                                        <button type="button" class="btn-step" 
+                                            onclick="const input = this.parentNode.querySelector('input'); if(input.value > 0) { input.stepDown(); confirmOrder('${food.name}') }">
+                                            −
+                                        </button>
+                                        
+                                        <input type="number" 
+                                            id="quantity-${food.name}" 
+                                            min="0" 
+                                            max="${isRau ? 1 : 99}" 
+                                            value="${quantityInCart}" 
+                                            class="input-UI" 
+                                            readonly>
+                                        
+                                        <button type="button" class="btn-step" 
+                                            onclick="const input = this.parentNode.querySelector('input'); if(input.value < input.max) { input.stepUp(); confirmOrder('${food.name}') }">
+                                            +
+                                        </button>
+                                    </div>
                                 </div>
 
-                                <p id="status-${food.name}">${isRau && quantityInCart > 0 ? 'Đã thêm rau' : `Đang có: ${quantityInCart}`}</p>
+                                <p id="status-${food.name}">
+                                    ${isRau && quantityInCart > 0 ? 'Đã thêm' : `Bạn đang có ${quantityInCart} món này`}
+                                </p>
                                 <hr>
 
                                 <button class="button-border" onclick="remove_food('${food.name}')">
