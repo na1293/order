@@ -1,0 +1,32 @@
+.nav-bottom {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        background-color: #ffffff;
+        border-top: 1px solid #ddd;
+        padding: 10px 0;
+
+        z-index: 1000;
+    }
+
+    .nav-bottom a {
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+    }
+
+    .nav-bottom a:hover {
+        color: #007bff;
+    }
+}

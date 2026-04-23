@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="CSS/element.css">
     <link rel="stylesheet" href="CSS/color.css">
     <link rel="stylesheet" href="CSS/logo.css">
+    <link rel="stylesheet" href="CSS/nav.css">
     <script src="script.js" defer></script>
     <script src="load.js" defer></script>
     <script src="order.js" defer></script>
@@ -26,16 +27,45 @@
     <script src="logo.js"></script>
 </head>
 <body>
-    <button class="menu-button" onclick="show_help()">Hỗ trợ</button>
     <div class="splash-screen" id="splashScreen" style="display: none;">
         <div class="splash-content">
             <div class="logo-wrapper">
                 <img src="img/icon-192-ver-5.png" alt="Logo">
             </div>
-            <h2 class="slogan">Yêu luôn từ miếng đầu tiên</h2>
              
         </div>
     </div>
+
+    <div class="nav-bottom">
+        <a href="#" onclick="show_help()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/>
+                <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/>
+                <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </a>
+
+        <a href="#main-info">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M3 10L12 3L21 10V21H3V10Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </a>
+
+        <a href="#preview-end-page">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10"
+                    stroke="currentColor"
+                    stroke-width="2"/>
+
+            <path d="M8 12l3 3 5-5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
+
     <div class="content" style="display: flex;">
         <div class="menu-order" id="menu-popup">
             <a href="#main-info">Xem các món ăn</a>
