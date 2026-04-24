@@ -52,14 +52,17 @@ const CACHE_NAME = 'menu-pro-v1';
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      // Thay vì cache.addAll() → cache từng file
-      return Promise.allSettled(
+      // 1. Chạy việc cache các file
+      const cacheAction = Promise.allSettled(
         urlsToCache.map((url) =>
           cache.add(url).catch((err) => {
-            console.warn('Không cache được:', url, err); // Bỏ qua, không crash
+            console.warn('Không cache được:', url, err);
           })
         )
       );
+      self.skipWaiting(); 
+
+      return cacheAction;
     })
   );
 });
