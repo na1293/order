@@ -14,3 +14,9 @@
 
 4. Tối ưu lưu trữ:
 - Chuyển định dạng WebP (Đã sửa)
+
+5. Cập nhật ứng dụng:
+- Vì trình duyệt ưu tiên bản cũ khi thêm tính năng offline tại service-worker.js, nên tùy chọn sau:
+    + Kiểm tra bản mới nhất: Get từ server
+    + Sử dụng caches.delete(cache) khi phát hiện v1 => v2 => ver n
+    + self.skipWaiting() giúp giữ bản cũ cho đến khi đóng app
