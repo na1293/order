@@ -1,5 +1,5 @@
 {
-  "name": "Tên quán",
+  "name": "Menu",
   "short_name": "Menu",
   "start_url": "/order/",
   "scope": "/order/",

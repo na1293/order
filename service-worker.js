@@ -47,7 +47,7 @@ const urlsToCache = [
   '/img/icon-192-ver-5.png' // Icon app
 ];
 
-const CACHE_NAME = 'menu-pro-v1';
+const CACHE_NAME = 'menu-v4'; // Dùng để thay đổi ver cache
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
