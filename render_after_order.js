@@ -7,12 +7,14 @@ function confirmOrder(NameFoods) {
     const quantity = parseInt(quantityInput.value); // Lấy số món đang có trên thanh nhập
     // --- BƯỚC TÌM GIÁ TỪ MENU ---
     let priceForBackend = 0;
+    let descriptionData = ""; // Biến khởi tạo mô tả từ menu
     
     // Duyệt qua các danh mục (noodles, rice...) để tìm giá theo tên món
     for (let category in menu) {
         for (let id in menu[category]) {
             if (menu[category][id].name === NameFoods) {
-                priceForBackend = menu[category][id].price_backend;
+                priceForBackend = menu[category][id].price_backend; // Duyệt giá
+                descriptionData = menu[category][id].description; // Duyệt mô tả
                 break;
             }
         }
@@ -30,13 +32,15 @@ function confirmOrder(NameFoods) {
 
     if (existingItem) {
         existingItem.quantity = quantity; 
-        existingItem.price_backend = priceForBackend; // Cập nhật lại giá mới nhất
+        existingItem.price_backend = priceForBackend; 
+        existingItem.description = descriptionData;
     } else {
-        // Lưu cả tên, số lượng và GIÁ BACKEND ✨
+        // Lưu thêm description vào đây
         currentOrder.push({ 
             name: NameFoods, 
             quantity: quantity, 
-            price_backend: priceForBackend 
+            price_backend: priceForBackend,
+            description: descriptionData
         });
     }
 

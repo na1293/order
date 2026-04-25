@@ -71,28 +71,28 @@ menu = {
     "topping": {
         "1": {
             "name": "Trứng lòng đào",
-            "price": "5.000 VND",
+            "price": "5.000 VND / Miếng",
             "price_backend": 5000,
             "description": "Trứng luộc, bổ sung protein cho món ăn.",
             "image": "img/egg.webP"
         },
         "2": {
             "name": "Trứng ốp la",
-            "price": "5.000 VND",
+            "price": "5.000 VND / Miếng",
             "price_backend": 5000,
             "description": "Nấu trứng ốp la, thêm hương vị đậm đà cho món ăn.",
             "image": "img/egg.webP"
         },
         "3": {
             "name": "Gà chiên miếng nhỏ",
-            "price": "5.000 VND",
+            "price": "5.000 VND / Nhiều miếng",
             "price_backend": 5000,
             "description": "Gà chiên giòn, cắt miếng nhỏ, thêm độ ngon cho món ăn.",
             "image": "img/chicken.webP"
         },
         "4": {
             "name": "Chả cá viên",
-            "price": "5.000 VND",
+            "price": "5.000 VND / Nhiều miếng",
             "price_backend": 5000,
             "description": "Chả cá viên chiên giòn, thêm hương vị đặc trưng cho món ăn.",
             "image": "img/fishcake.webP"
@@ -108,19 +108,19 @@ menu = {
             "name": "Phô mai",
             "price": "5.000 VND",
             "price_backend": 5000,
-            "description": "Phô mai tan chảy, tạo độ béo ngậy cho món ăn.",
+            "description": "[Chỉ kèm Tobboki] Phô mai tan chảy, tạo độ béo ngậy cho món ăn.",
             "image": "img/pho_mai.webP"
         },
         "7": {
             "name": "Xúc xích",
-            "price": "5.000 VND",
+            "price": "5.000 VND/ Nhiều miếng",
             "price_backend": 5000,
             "description": "Xúc xích chiên giòn, thêm hương vị thơm ngon cho món ăn.",
             "image": "img/sausage.webP"
         },
         "8": {
             "name": "Thịt nướng",
-            "price": "5.000 VND",
+            "price": "5.000 VND / Nhiều miếng",
             "price_backend": 5000,
             "description": "Thịt nướng thơm ngon, thêm hương vị đậm đà cho món ăn.",
             "image": "img/grilledmeat.webP"
@@ -200,6 +200,57 @@ menu = {
             "price_backend": 5000,
             "description": "[Chỉ bim bim] Gói bim bim ăn vặt",
             "image": "img/bim-bim.webP"
+        }
+    },
+    "combo": {
+        "1": {
+            "name": "[Gợi ý] Mỳ 25K (1 gói)",
+            "price": "25.000 VND",
+            "price_backend": 25000,
+            "description": "Thành phần:\n- 1 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích",
+            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
+        },
+        "2": {
+            "name": "[Gợi ý] Mỳ 30K (1 gói)",
+            "price": "30.000 VND",
+            "price_backend": 30000,
+            "description": "Thành phần:\n- 1 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Thịt nướng\n- Viên cá",
+            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
+        },
+        "3": {
+            "name": "[Gợi ý] Mỳ 30K (2 gói)",
+            "price": "30.000 VND",
+            "price_backend": 30000,
+            "description": "Thành phần:\n- 2 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá",
+            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
+        },
+        "4": {
+            "name": "[Gợi ý] Mỳ 35K (1 gói)",
+            "price": "35.000 VND",
+            "price_backend": 35000,
+            "description": "Thành phần:\n- 1 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá\n- Thịt nướng\n- Chọn thêm Topping",
+            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
+        },
+        "5": {
+            "name": "[Gợi ý] Mỳ 35K (2 gói)",
+            "price": "35.000 VND",
+            "price_backend": 35000,
+            "description": "Thành phần:\n- 2 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá\n- Thịt nướng",
+            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
+        },
+        "6": {
+            "name": "[Gợi ý] Cơm trộn 25K",
+            "price": "25.000 VND",
+            "price_backend": 25000,
+            "description": "Thành phần:\n- Cơm trắng\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích",
+            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
+        },
+        "7": {
+            "name": "[Gợi ý] Cơm trộn 30K",
+            "price": "30.000 VND",
+            "price_backend": 30000,
+            "description": "Thành phần:\n- Cơm trắng\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá",
+            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
         }
     }
 }

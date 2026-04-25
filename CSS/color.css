@@ -68,6 +68,35 @@
     z-index: 2;
 }
 
+.description {
+    white-space: pre-line;
+    text-align: left; 
+    line-height: 1.6;
+    
+    /* 1. Cố định chiều cao tối đa */
+    max-height: 120px; /* Bạn có thể điều chỉnh con số này tùy ý */
+    
+    /* 2. Tạo hiệu ứng cuộn khi nội dung vượt quá max-height */
+    overflow-y: auto; 
+    
+    /* 3. Thêm khoảng cách và trang trí cho box */
+    padding: 10px;
+    background-color: #f9f9f9; /* Màu nền nhẹ để phân biệt với card */
+    border-radius: 8px;        /* Bo góc cho "soft" */
+    margin-bottom: 15px;
+    border: 1px solid #eee;    /* Viền mảnh cho lịch sự */
+}
+
+/* Tùy chỉnh thanh cuộn (scrollbar) cho "style" GenZ */
+.description::-webkit-scrollbar {
+    width: 6px;
+}
+
+.description::-webkit-scrollbar-thumb {
+    background-color: #dfe6e9; /* Màu thanh cuộn */
+    border-radius: 10px;
+}
+
 .food-box-menu strong {
     display: block;
     font-size: 22px;

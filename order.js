@@ -20,7 +20,7 @@ function render(name) {
                         
                         <div class="food-info">
                             <strong>${food.name}</strong>
-                            <p>${food.description}</p>
+                            <p class="description">${food.description}</p>
                             
                             <div class="price-row">
                                 <span class="price">${food.price}</span>
