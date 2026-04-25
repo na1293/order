@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <div class="nav-bottom">
+    <div class="nav-bottom" id="nav-bottom" style="display: none;">
         <a href="#" onclick="show_help()">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/>
@@ -84,8 +84,8 @@
                 <h2>Giá <span style="color:#ffb703">hợp lý</span> mà <span style="color: #ffb703;">ngon hết ý</span>.</h2>
             </div>
             <div class="can-giua-pt gap">
-                <button class="button-full" id="info-2">Chọn đặt món</button>
-                <button class="button-border" id="resetData">Tạo phiên mới</button>
+                <button class="btn-signature" id="info-2">Chọn đặt món</button>
+                <!-- <button class="btn-signature" id="resetData">Tạo phiên mới</button> -->
                 <!-- <button onclick="dat_nhom()">test</button> -->
             </div>
         </div>
@@ -171,6 +171,7 @@
                     <div class="tieu-de">
                         <h3>Bạn đã đặt xong? Bấm vào đây để xem lại các danh sách món ăn.</h3>
                         <button class="button-full" onclick="dat_nhom()">Hoàn thành</button>
+                        <button class="button-border" id="resetData">Tạo phiên mới</button>
                     </div>
                 </div>
             </div>
