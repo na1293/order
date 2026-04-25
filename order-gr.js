@@ -75,10 +75,12 @@ function dat_nhom() {
 // Hàm view giờ chỉ cần nhận mô tả vì ta đã check điều kiện gợi ý lúc Render rồi
 function view(mo_ta) {
     const displayArea = document.getElementById("funt_view");
-    let formattedText = mo_ta.replace(/ - /g, '<br>- ').replace(/Thành phần:/g, '<br><strong>Thành phần:</strong>');
+    
+    let formattedText = mo_ta
+        // 1. In đậm tiêu đề [Gợi ý]... đến dấu hai chấm
+        .replace(/(\[Gợi ý\].*?:)/g, '<strong>$1</strong>')
+        .replace(/Thành phần:/g, '<br><strong>Thành phần:</strong>')
+        .replace(/- /g, '<br>- ');
 
     displayArea.innerHTML = formattedText;
-    
-    // Cuộn đến khu vực hiển thị để user dễ nhìn
-    displayArea.scrollIntoView({ behavior: 'smooth' });
 }

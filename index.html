@@ -56,7 +56,7 @@
             </svg>
         </a>
 
-        <a href="#preview-end-page">
+        <a href="#preview-end-page" onclick="dat_nhom()">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10"
                     stroke="currentColor"
@@ -91,92 +91,94 @@
         </div>
     </div>
 
-    <div class="box">
-        <div class="content">
-            <h2 style="font-size: 50px;">Không biết ăn gì? Để mình gợi ý</h2>
-            <div class="can-giua-pt">
-                <p style="font-size: 30px;"><a href="#combo">Gợi ý món</a></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="tieu-de">
-        <div class="content">
-            <h2 style="font-size: 50px;">Càng ăn càng ngon</h2>
-        </div>
-    </div>
-
-    <div class="box-vuong">
-        <div class="food-container" id="main-info">
+    <div id="main" style="display: none;">
+        <div class="box">
             <div class="content">
-                <div class="box-menu">
+                <h2 style="font-size: 50px;">Không biết ăn gì? Để mình gợi ý</h2>
+                <div class="can-giua-pt">
                     <p style="font-size: 30px;"><a href="#combo">Gợi ý món</a></p>
-                    <p style="font-size: 30px;"><a href="#noodles">Các món mỳ</a></p>
-                    <p style="font-size: 30px;"><a href="#rice">Món cơm</a></p>
-                    <p style="font-size: 30px;"><a href="#kimbap">Cơm cuộn Hàn Quốc</a></p>
-                    <p style="font-size: 30px;"><a href="#tokbokki">Tokbokki</a></p>
-                    <p style="font-size: 30px;"><a href="#drinks">Đồ uống</a></p>
-                    <p style="font-size: 30px;"><a href="#topping">Topping</a></p>
-                    <p style="font-size: 30px;"><a href="#more">Thêm</a></p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="main" id="order-box">
-        <div class="content">
-            <div class="tieu-de" id="title-order-nav">
-                <span>
-                    <h2>Ăn gì cũng nghiền.</h2>
-                    <h3>Chọn hương vị yêu thích</h3>
-                </span>
+        <div class="tieu-de">
+            <div class="content">
+                <h2 style="font-size: 50px;">Càng ăn càng ngon</h2>
             </div>
         </div>
 
-        <div class="food-section">
-            <div class="food-color-card">
-                <div class="food-container">
-                    <div class="content">
-                        <div id="order" class="food-container">
-                            <div class="box-food">
-                                <img src="" alt="">
-                                <p class="food-name"></p>
-                                <p class="food-description"></p>
+        <div class="box-vuong">
+            <div class="food-container" id="main-info">
+                <div class="content">
+                    <div class="box-menu">
+                        <p style="font-size: 30px;"><a href="#combo">Gợi ý món</a></p>
+                        <p style="font-size: 30px;"><a href="#noodles">Các món mỳ</a></p>
+                        <p style="font-size: 30px;"><a href="#rice">Món cơm</a></p>
+                        <p style="font-size: 30px;"><a href="#kimbap">Cơm cuộn Hàn Quốc</a></p>
+                        <p style="font-size: 30px;"><a href="#tokbokki">Tokbokki</a></p>
+                        <p style="font-size: 30px;"><a href="#drinks">Đồ uống</a></p>
+                        <p style="font-size: 30px;"><a href="#topping">Topping</a></p>
+                        <p style="font-size: 30px;"><a href="#more">Thêm</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main" id="order-box">
+            <div class="content">
+                <div class="tieu-de" id="title-order-nav">
+                    <span>
+                        <h2>Ăn gì cũng nghiền.</h2>
+                        <h3>Chọn hương vị yêu thích</h3>
+                    </span>
+                </div>
+            </div>
+
+            <div class="food-section">
+                <div class="food-color-card">
+                    <div class="food-container">
+                        <div class="content">
+                            <div id="order" class="food-container">
+                                <div class="box-food">
+                                    <img src="" alt="">
+                                    <p class="food-name"></p>
+                                    <p class="food-description"></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <p style="color: #ffff;">Hình ảnh chỉ mang tính chất minh họa cho sản phẩm. Vui lòng dùng để tham khảo.</p>
                 </div>
-                <p style="color: #ffff;">Hình ảnh chỉ mang tính chất minh họa cho sản phẩm. Vui lòng dùng để tham khảo.</p>
-            </div>
 
-            <div class="can-giua-pt" id="Nextbtn" style="display: none;">
-                <button class="btn-signature" onclick="topping()">Tiếp theo</button>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="main" id="order-topping">
-        <div class="box"></div>
-    </div>
-
-    <div class="content">
-        <p></p>
-    </div>
-
-    <div class="can-giua-pt" id="preview-end-page">
-        <div class="box-vuong">
-            <div class="content">
-                <div class="tieu-de">
-                    <h3>Bạn đã đặt xong? Bấm vào đây để xem lại các danh sách món ăn.</h3>
-                    <button class="button-full" onclick="dat_nhom()">Hoàn thành</button>
+                <div class="can-giua-pt" id="Nextbtn" style="display: none;">
+                    <button class="btn-signature" onclick="topping()">Tiếp theo</button>
                 </div>
+
             </div>
         </div>
-    </div>
 
-    <div id="pay" style="display: none;">
-        <div id="nav-pay">
+        <div class="main" id="order-topping">
+            <div class="box"></div>
+        </div>
+
+        <div class="content">
+            <p></p>
+        </div>
+
+        <div class="can-giua-pt" id="preview-end-page">
+            <div class="box-vuong">
+                <div class="content">
+                    <div class="tieu-de">
+                        <h3>Bạn đã đặt xong? Bấm vào đây để xem lại các danh sách món ăn.</h3>
+                        <button class="button-full" onclick="dat_nhom()">Hoàn thành</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pay" style="display: none;">
+            <div id="nav-pay">
+            </div>
         </div>
     </div>
 </body>
