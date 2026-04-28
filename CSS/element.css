@@ -240,3 +240,8 @@ html {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.floating {
+  position: fixed;
+  z-index: 9999;
+}

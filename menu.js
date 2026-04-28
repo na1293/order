@@ -23,9 +23,9 @@ menu = {
         },
         "4": {
             "name": "Mỳ spaghetti",
-            "price": "10.000 VND",
-            "price_backend": 10000,
-            "description": "[Chỉ mỳ] Mỳ Spagetti với nước sốt cà chua thơm ngon. Có thể mua kèm Topping.",
+            "price": "15.000 VND",
+            "price_backend": 15000,
+            "description": "[Mỳ và sốt] Mỳ Spagetti với nước sốt cà chua thơm ngon. Có thể mua kèm Topping.",
             "image": "img/spaghetti.webP"
         },
         "5": {
@@ -47,7 +47,7 @@ menu = {
     },
     "kimbap": {
         "1": {
-            "name": "Hộp Kimbap nhỏ",
+            "name": "Hộp Kimbap mini",
             "price": "10.000 VND",
             "price_backend": 10000,
             "description": "Loại nhỏ ăn kèm: Cơm cuộn Hàn Quốc là món ăn truyền thống của Hàn Quốc, gồm cơm trắng được cuộn trong lá sen và kèm theo các loại rau củ và thịt.",
@@ -62,8 +62,8 @@ menu = {
         },
         "3": {
             "name": "Kimbap chiên",
-            "price": "Từ 10.000 VND",
-            "price_backend": 10000,
+            "price": "Từ 25.000 VND",
+            "price_backend": 25000,
             "description": "Kimbap được chiên giòn, tạo độ giòn rụm cho món ăn.",
             "image": "img/kimbap_fried.webP"
         }
@@ -85,7 +85,7 @@ menu = {
         },
         "3": {
             "name": "Gà chiên miếng nhỏ",
-            "price": "5.000 VND / Nhiều miếng",
+            "price": "5.000 VND / 3 miếng",
             "price_backend": 5000,
             "description": "Gà chiên giòn, cắt miếng nhỏ, thêm độ ngon cho món ăn.",
             "image": "img/chicken.webP"
@@ -113,7 +113,7 @@ menu = {
         },
         "7": {
             "name": "Xúc xích",
-            "price": "5.000 VND/ Nhiều miếng",
+            "price": "5.000 VND/ Miếng",
             "price_backend": 5000,
             "description": "Xúc xích chiên giòn, thêm hương vị thơm ngon cho món ăn.",
             "image": "img/sausage.webP"
@@ -122,6 +122,13 @@ menu = {
             "name": "Thịt nướng",
             "price": "5.000 VND / Nhiều miếng",
             "price_backend": 5000,
+            "description": "Thịt nướng thơm ngon, thêm hương vị đậm đà cho món ăn.",
+            "image": "img/grilledmeat.webP"
+        },
+        "9": {
+            "name": "Thịt nướng (Nhiều)",
+            "price": "10.000 VND / Nhiều miếng",
+            "price_backend": 10000,
             "description": "Thịt nướng thơm ngon, thêm hương vị đậm đà cho món ăn.",
             "image": "img/grilledmeat.webP"
         }
@@ -251,6 +258,20 @@ menu = {
             "price_backend": 30000,
             "description": "Thành phần:\n- Cơm trắng\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá",
             "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
-        }
+        },
+        "8": {
+            "name": "[Gợi ý] Mỳ kimchi thịt nướng",
+            "price": "25.000 VND",
+            "price_backend": 25000,
+            "description": "Thành phần:\n- Mỳ\n- Thịt nướng\n- Nấm kim châm\n- Trứng",
+            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
+        },
+        "9": {
+            "name": "[Gợi ý] Mỳ spaghetti",
+            "price": "25.000 VND",
+            "price_backend": 25000,
+            "description": "Thành phần:\n- Mỳ\n- Sốt cà chua có thịt băm\n- 1 miếng xúc xích\n- 3 miếng gà",
+            "image": "img/spaghetti.jpg"
+        },
     }
 }
