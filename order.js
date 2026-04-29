@@ -15,7 +15,7 @@ function render(name) {
 
                 return `
                     <div class="food-box-menu">
-                        <img src="${food.image}" loading="lazy" decoding="async" alt="${food.name}"
+                        <img src="${food.image}" decoding="async" alt="${food.name}"
                             onerror="this.onerror=null; this.src='https://dummyimage.com/300x300/ff7f00/fff.png&text=Lỗi+Ảnh';">
                         
                         <div class="food-info">

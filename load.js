@@ -9,10 +9,16 @@ const links = document.querySelectorAll('a[href^="#"]');
 links.forEach(link => { // Lấy id trên thanh URL (VD: #topping)
     link.addEventListener('click', function(e) { // Nhận từ thẻ a khi phát hiện click
         const Nextbtn = document.getElementById("Nextbtn");
+        let nav_bottom = document.getElementById("nav-bottom");
+        nav_bottom.style.display = "flex";
+
+        const orderBox = document.querySelector("#order-box");
+        orderBox.hidden = false;
+
         if (Nextbtn) Nextbtn.style.display = "block"; // Hiện nút "Tiếp theo" khi click vào menu
         const id = this.getAttribute('href'); 
 
-        // 2. Kiểm tra xem ID này có thuộc danh sách menu không (để tránh bắt nhầm link #home, #top...)
+        // 2. Kiểm tra xem ID này có thuộc danh sách menu không
         const categoryKey = id.substring(1); 
         if (menu[categoryKey]) { // Chỉ chạy nếu key này tồn tại trong object menu của bạn
             

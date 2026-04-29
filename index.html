@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="img/icon-192.png">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#ff6b6b">
+    <meta name="google" content="notranslate">
     <title>Menu - Chào mừng bạn</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/mobile.css">
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="CSS/color.css">
     <link rel="stylesheet" href="CSS/logo.css">
     <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/for_app.css">
     <script src="script.js" defer></script>
     <script src="load.js" defer></script>
     <script src="order.js" defer></script>
@@ -26,6 +28,8 @@
     <script src="popup_Menu.js" defer></script>
     <script src="logo.js"></script>
     <script src="cuteMessages.js" defer></script>
+    <script src="for_app.js" defer></script>
+    <script src="service-worker.js"></script>
     <!-- <script src="review.js"></script> -->
 </head>
 <body>
@@ -84,7 +88,7 @@
                 <h2>Giá <span style="color:#ffb703">hợp lý</span> mà <span style="color: #ffb703;">ngon hết ý</span>.</h2>
             </div>
             <div class="can-giua-pt gap">
-                <button class="btn-signature" id="info-2">Chọn đặt món</button>
+                <button class="btn-signature" id="info-2">Chạm để xem</button>
                 <!-- <button class="btn-signature" id="resetData">Tạo phiên mới</button> -->
                 <!-- <button onclick="dat_nhom()">test</button> -->
             </div>
@@ -124,7 +128,7 @@
             </div>
         </div>
 
-        <div class="main" id="order-box">
+        <div class="main" id="order-box" style="display: none;">
             <div class="content">
                 <div class="tieu-de" id="title-order-nav">
                     <span>

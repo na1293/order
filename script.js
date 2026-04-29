@@ -2,12 +2,10 @@
 const openid = ["#main-info"]; // Khai báo di chuyển đến main-info
 let info2 = document.getElementById("info-2");
 let main = document.getElementById("main");
-let nav_bottom = document.getElementById("nav-bottom");
 let count_info = 0;
 info2.addEventListener("click", function() {
     const target = document.querySelector(openid[count_info]);
     main.style = "flex"
-    nav_bottom.style = "flex"
     target.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'

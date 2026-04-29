@@ -20,3 +20,5 @@
     + Kiểm tra bản mới nhất: Get từ server
     + Sử dụng caches.delete(cache) khi phát hiện v1 => v2 => ver n
     + self.skipWaiting() giúp giữ bản cũ cho đến khi đóng app
+
+6. Thanh điều hướng: Nằm trong load.js

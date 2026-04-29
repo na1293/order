@@ -1,0 +1,8 @@
+html, body, button, .clickable {
+    touch-action: manipulation;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent; /* Xóa lớp phủ màu khi chạm trên mobile */
+    outline: none; /* Xóa viền xanh khi focus */
+}
