@@ -1,9 +1,9 @@
 const CACHE_NAME = 'offline-v2';
 const ASSETS_TO_CACHE = [
-  './',              // Cache chính trang chủ
-  './index.html',
-  './CSS/styles.css',
-  './offline.html'
+  '/',              // Cache chính trang chủ
+  'index.html',
+  'CSS/styles.css',
+  'offline.html'
 ];
 
 self.addEventListener('install', (event) => {

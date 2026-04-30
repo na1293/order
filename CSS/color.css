@@ -22,8 +22,8 @@
 /* Container để căn giữa cái card */
 .food-container {
     display: flex;
-    flex-wrap: wrap; /* Cho phép các món tự xuống hàng */
-    gap: 20px;       /* Khoảng cách giữa các món */
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
     justify-content: center;
 }

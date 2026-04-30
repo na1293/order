@@ -46,14 +46,6 @@
     </div>
 
     <div class="nav-bottom" id="nav-bottom" style="display: none;">
-        <a href="#" onclick="show_help()">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/>
-                <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/>
-                <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"/>
-            </svg>
-        </a>
-
         <a href="#main-info">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M3 10L12 3L21 10V21H3V10Z" stroke="currentColor" stroke-width="2"/>
@@ -76,10 +68,7 @@
     </div>
 
     <div class="content" style="display: flex;">
-        <div class="menu-order" id="menu-popup">
-            <a href="#main-info">Xem các món ăn</a>
-            <a href="#Nextbtn">Món tiếp theo</a>
-        </div>
+
     </div>
     <div class="content">
         <div class="can">
@@ -88,7 +77,9 @@
                 <h2>Giá <span style="color:#ffb703">hợp lý</span> mà <span style="color: #ffb703;">ngon hết ý</span>.</h2>
             </div>
             <div class="can-giua-pt gap">
-                <button class="btn-signature" id="info-2">Chạm để xem</button>
+                <div class="content">
+                    <button class="btn-signature" id="info-2">Chạm để xem</button>
+                </div>
                 <!-- <button class="btn-signature" id="resetData">Tạo phiên mới</button> -->
                 <!-- <button onclick="dat_nhom()">test</button> -->
             </div>
@@ -96,18 +87,15 @@
     </div>
 
     <div id="main" style="display: none;">
-        <div class="box">
-            <div class="content">
-                <h2 style="font-size: 50px;">Không biết ăn gì? Để mình gợi ý</h2>
-                <div class="can-giua-pt">
-                    <p style="font-size: 30px;"><a href="#combo">Gợi ý món</a></p>
+        <div class="can-giua-pt" id="preview-end-page">
+            <div class="box-vuong">
+                <div class="content">
+                    <div class="tieu-de">
+                        <h3>Bạn đã đặt xong? Bấm vào đây để xem lại các danh sách món ăn.</h3>
+                        <button class="button-full" id="view_card_now">Xem đơn hàng</button>
+                        <button class="button-border" id="resetData">Tạo phiên mới</button>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="tieu-de">
-            <div class="content">
-                <h2 style="font-size: 50px;">Càng ăn càng ngon</h2>
             </div>
         </div>
 
@@ -143,11 +131,7 @@
                     <div class="food-container">
                         <div class="content">
                             <div id="order" class="food-container">
-                                <div class="box-food">
-                                    <img src="" alt="">
-                                    <p class="food-name"></p>
-                                    <p class="food-description"></p>
-                                </div>
+                            Danh mục món ăn
                             </div>
                         </div>
                     </div>
@@ -169,19 +153,14 @@
             <p></p>
         </div>
 
-        <div class="can-giua-pt" id="preview-end-page">
-            <div class="box-vuong">
+        <div id="pay">
+            <div class="box">
                 <div class="content">
-                    <div class="tieu-de">
-                        <h3>Bạn đã đặt xong? Bấm vào đây để xem lại các danh sách món ăn.</h3>
-                        <button class="button-full" onclick="dat_nhom()">Hoàn thành</button>
-                        <button class="button-border" id="resetData">Tạo phiên mới</button>
-                    </div>
+                    <h2>Bạn đã đặt xong?</h2>
+                    <button class="button-full" onclick="dat_nhom()">Đặt xong</button>
                 </div>
             </div>
-        </div>
 
-        <div id="pay" style="display: none;">
             <div id="nav-pay">
             </div>
         </div>

@@ -80,3 +80,17 @@ function remove_food(name_food_remove) {
         alert(`Đã gỡ phần ${name_food_remove} thành công! ✅`);
     }
 }
+
+// === Xử ký điều hướng === //
+
+const viewCardBtn = document.getElementById("view_card_now");
+const paySection = document.getElementById("pay");
+
+if (viewCardBtn && paySection) {
+    viewCardBtn.addEventListener('click', (e) => {
+        paySection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+}

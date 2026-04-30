@@ -48,15 +48,20 @@ links.forEach(link => { // Lấy id trên thanh URL (VD: #topping)
 // Cập nhật hàm topping trong load.js
 let countStage = 0;
 function topping() {
-    const orderTopping = document.querySelector("#order-topping");
-    const orderBox = document.querySelector("#order-box");
-    const orderSection = document.querySelector("#title-order-nav");
-    const preview = document.getElementById("preview-end-page");
+    let orderTopping = document.querySelector("#order-topping");
+    let orderBox = document.querySelector("#order-box");
+    let orderSection = document.querySelector("#title-order-nav");
+    let preview = document.getElementById("preview-end-page");
+    let main_info = document.getElementById("main-info");
+    let orderBox_else = document.querySelector("#order-box"); // Dùng biến khác bản chất vẫn là orderBox
 
     // if (orderBox) orderBox.style.display = "none"; // Ẩn món chính
     if (orderTopping) {
         orderTopping.style.display = "flex"; // Hiện khu vực topping
-        if (countStage === 0) {
+        if (countStage === -1) {
+            countStage += 1;
+        }
+        else if (countStage === 0) {
             di_chuyen_len()
             render('#topping');
             countStage += 1;
@@ -71,6 +76,7 @@ function topping() {
         } else {
             const done = confirm("Bạn đã đặt xong?")
             if (done) {
+                countStage = -1;
                 di_chuyen_xuong();
                 dat_nhom();
             }
