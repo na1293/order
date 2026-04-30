@@ -211,67 +211,67 @@ menu = {
     },
     "combo": {
         "1": {
+            "name": "[Gợi ý] Mỳ spaghetti",
+            "price": "25.000 VND",
+            "price_backend": 25000,
+            "description": "Thành phần:\n- Mỳ\n- Sốt cà chua có thịt băm\n- 1 miếng xúc xích\n- 3 miếng gà",
+            "image": "img/spaghetti.jpg"
+        },
+        "2": {
             "name": "[Gợi ý] Mỳ 25K (1 gói)",
             "price": "25.000 VND",
             "price_backend": 25000,
             "description": "Thành phần:\n- 1 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích",
             "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
         },
-        "2": {
+        "3": {
             "name": "[Gợi ý] Mỳ 30K (1 gói)",
             "price": "30.000 VND",
             "price_backend": 30000,
             "description": "Thành phần:\n- 1 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Thịt nướng\n- Viên cá",
             "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
         },
-        "3": {
+        "4": {
             "name": "[Gợi ý] Mỳ 30K (2 gói)",
             "price": "30.000 VND",
             "price_backend": 30000,
             "description": "Thành phần:\n- 2 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá",
             "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
         },
-        "4": {
+        "5": {
             "name": "[Gợi ý] Mỳ 35K (1 gói)",
             "price": "35.000 VND",
             "price_backend": 35000,
             "description": "Thành phần:\n- 1 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá\n- Thịt nướng\n- Chọn thêm Topping",
             "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
         },
-        "5": {
+        "6": {
             "name": "[Gợi ý] Mỳ 35K (2 gói)",
             "price": "35.000 VND",
             "price_backend": 35000,
             "description": "Thành phần:\n- 2 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá\n- Thịt nướng",
             "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
         },
-        "6": {
+        "7": {
             "name": "[Gợi ý] Cơm trộn 25K",
             "price": "25.000 VND",
             "price_backend": 25000,
             "description": "Thành phần:\n- Cơm trắng\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích",
             "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
         },
-        "7": {
+        "8": {
             "name": "[Gợi ý] Cơm trộn 30K",
             "price": "30.000 VND",
             "price_backend": 30000,
             "description": "Thành phần:\n- Cơm trắng\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá",
             "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
         },
-        "8": {
+        "9": {
             "name": "[Gợi ý] Mỳ kimchi thịt nướng",
             "price": "25.000 VND",
             "price_backend": 25000,
             "description": "Thành phần:\n- Mỳ\n- Thịt nướng\n- Nấm kim châm\n- Trứng",
             "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
-        },
-        "9": {
-            "name": "[Gợi ý] Mỳ spaghetti",
-            "price": "25.000 VND",
-            "price_backend": 25000,
-            "description": "Thành phần:\n- Mỳ\n- Sốt cà chua có thịt băm\n- 1 miếng xúc xích\n- 3 miếng gà",
-            "image": "img/spaghetti.jpg"
         },
     }
 }
