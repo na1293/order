@@ -11,7 +11,7 @@ document.addEventListener('dblclick', function (event) {
 if ('serviceWorker' in navigator) {
   // Đợi trang load xong mới đăng ký để không làm chậm app
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('sw.js')
       .then(registration => {
         console.log('✅ SW Registered với scope:', registration.scope);
         
