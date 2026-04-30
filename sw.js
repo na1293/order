@@ -1,8 +1,9 @@
 const CACHE_NAME = 'offline-v2';
-// Thêm file CSS vào danh sách cần lưu trữ
 const ASSETS_TO_CACHE = [
-  'offline.html',
-  'CSS/text.css' 
+  './',              // Cache chính trang chủ
+  './index.html',
+  './CSS/styles.css',
+  './offline.html'
 ];
 
 self.addEventListener('install', (event) => {
