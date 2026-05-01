@@ -1,6 +1,12 @@
 // Xử lý cuối cùng
 
 function dat_nhom() {
+    let ask_if_order = confirm("Bạn có chắc chắn muốn đặt ngay?");
+    if (!ask_if_order) {
+        alert("Vẫn chưa đặt. Bạn có thể xem các món khác.")
+        return;
+    }
+
     // 1. Hiển thị khu vực tính toán tiền
     const pay = document.getElementById("pay");
     if (pay) pay.style.display = "block";
@@ -20,7 +26,7 @@ function dat_nhom() {
     localStorage.removeItem('currentOrder');
 
     // 4. RENDER TOÀN BỘ LỊCH SỬ
-    const nav_pay = document.getElementById("nav-pay");
+    const nav_pay = document.querySelector(".nav-pay");
     let finalHtml = "";
     let grandTotal = 0; // Để dùng cho alert cuối cùng
 
@@ -56,11 +62,12 @@ function dat_nhom() {
                 <hr>
                 <p><strong>Tổng lần này: ${groupTotal.toLocaleString()} VND</strong></p>
                 ${hasSuggestion 
-                    ? `<a onclick="view('${descriptionDTCmt.trim()}')" style="cursor:pointer; color:blue; text-decoration:underline;">Bấm vào đây để xem thành phần</a>` 
-                    : `<span style="color:gray;">(Không có gợi ý cho đơn này)</span>`
+                    ? `<a style="cursor:pointer; color:blue; text-decoration:underline;" 
+                        onclick="view('${descriptionDTCmt.trim()}'); show_help();">
+                        Bấm vào đây để xem thành phần
+                        </a>` 
+                    : `<span style="color:gray;">Không có gợi ý cho đơn này</span>`
                 }
-                <hr>
-                <p id="funt_view" class="view-style"></p>
             </div>
         </div>
         `;
