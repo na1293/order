@@ -43,6 +43,13 @@ menu = {
             "price_backend": 10000,
             "description": "Đây là cơm trắng. Bạn có thể gọi thêm Topping.",
             "image": "img/rice.webP"
+        },
+        "2": {
+            "name": "Cơm gà",
+            "price": "30.000 VND",
+            "price_backend": 30000,
+            "description": "Cơm gà. Bạn có thể thử món này.\nBạn sẽ có cơm và gà miếng nhỏ tùy chọn theo khẩu vị.",
+            "image": "img/rice_chicken.jpg"
         }
     },
     "kimbap": {

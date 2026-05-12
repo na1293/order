@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="CSS/logo.css">
     <link rel="stylesheet" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/for_app.css">
+    <link rel="stylesheet" href="CSS/unline.css">
+    <script src="only_app.js" defer></script>
     <script src="script.js" defer></script>
     <script src="load.js" defer></script>
     <script src="order.js" defer></script>
@@ -83,10 +85,14 @@
             </div>
             <div class="can-giua-pt gap">
                 <div class="content">
-                    <button class="btn-signature" id="info-2">Chạm để xem</button>
+                    <button class="btn-signature info-action resetBtnConfirm" id="info-2">Chạm để xem</button>
+                    <!-- info-2 là next -->
                 </div>
                 <!-- <button class="btn-signature" id="resetData">Tạo phiên mới</button> -->
                 <!-- <button onclick="dat_nhom()">test</button> -->
+            </div>
+            <div class="can-giua-pt">
+                <a href="#" class="info-2">Tiếp tục mà không làm mới</a>
             </div>
         </div>
     </div>
@@ -96,9 +102,9 @@
             <div class="box-vuong">
                 <div class="content">
                     <div class="tieu-de">
-                        <h3>Bạn đã đặt xong? Bấm vào đây để xem lại các danh sách món ăn.</h3>
-                        <button class="button-full" id="view_card_now">Xem đơn hàng</button>
-                        <button class="button-border" id="resetData">Tạo phiên mới</button>
+                        <h3>Bạn có muốn gọi thêm?</h3>
+                        <button class="button-full" onclick="document.getElementById('main-info').scrollIntoView({ behavior: 'smooth' })">Gọi thêm món</button>
+                        <button class="button-border" id="view_card_now">Xem giỏ hàng</button>
                         <p id="funt_view" class="view-style"></p>
                     </div>
                 </div>

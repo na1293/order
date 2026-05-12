@@ -1,24 +1,28 @@
-// Chỉ xử lý phần id và di chuyển
-const openid = ["#main-info"]; // Khai báo di chuyển đến main-info
-let info2 = document.getElementById("info-2");
+const openid = ["#main-info"];
 let main = document.getElementById("main");
-let count_info = 0;
-info2.addEventListener("click", function() {
-    const target = document.querySelector(openid[count_info]);
-    main.style = "flex"
-    target.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-    });
-});
 
-// Xử lý reset
-
-const resetData = document.getElementById("resetData")
-resetData.addEventListener("click", function() {
-    const resetAsk = confirm("Bạn có muốn tạo phiên mới?\nĐiều đó có thể làm mất dữ liệu hiện tại")
-    if (resetAsk) { 
-        localStorage.clear();
-        location.reload();
+// 1. Hàm xử lý cuộn trang
+const handleNext = (e) => {
+    e.preventDefault();
+    const target = document.querySelector(openid[0]);
+    if (main) main.style = "flex";
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-})
+};
+
+const triggerElements = document.querySelectorAll("#info-2, .info-2");
+triggerElements.forEach(el => el.addEventListener("click", handleNext));
+
+// 3. Xử lý Reset
+const handleReset = () => {
+
+    localStorage.clear();
+};
+
+// Gán cho nút reset (nếu có)
+const resetBtn = document.querySelector(".resetData");
+const resetBtnConfirm = document.querySelector(".resetBtnConfirm");
+
+if (resetBtn) resetBtn.addEventListener("click", handleReset);
+if (resetBtnConfirm) resetBtnConfirm.addEventListener("click", handleReset);

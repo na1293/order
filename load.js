@@ -10,7 +10,13 @@ links.forEach(link => { // Lấy id trên thanh URL (VD: #topping)
     link.addEventListener('click', function(e) { // Nhận từ thẻ a khi phát hiện click
         const Nextbtn = document.getElementById("Nextbtn");
         let nav_bottom = document.getElementById("nav-bottom");
-        nav_bottom.style.display = "flex";
+
+        // Kiểm tra nếu chiều rộng màn hình nhỏ hơn hoặc bằng 767px
+        if (window.innerWidth <= 767) {
+            nav_bottom.style.display = "flex";
+        } else {
+            nav_bottom.style.display = "none";
+        }
 
         const orderBox = document.querySelector("#order-box");
         orderBox.hidden = false;
@@ -54,7 +60,6 @@ function topping() {
     let preview = document.getElementById("preview-end-page");
     let main_info = document.getElementById("main-info");
     let orderBox_else = document.querySelector("#order-box"); // Dùng biến khác bản chất vẫn là orderBox
-
     // if (orderBox) orderBox.style.display = "none"; // Ẩn món chính
     if (orderTopping) {
         orderTopping.style.display = "flex"; // Hiện khu vực topping

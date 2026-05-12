@@ -1,0 +1,20 @@
+@media only screen and (max-width: 767px) {
+    html, body {
+        -webkit-user-select: none; 
+        -ms-user-select: none;     
+        user-select: none;         
+
+        /* Chặn menu context khi nhấn giữ trên mobile */
+        -webkit-touch-callout: none; 
+    }
+
+    /* Cho phép bôi đen riêng tại vùng này */
+    .description {
+        -webkit-user-select: text; /* Safari */
+        -ms-user-select: text;     /* IE/Edge */
+        user-select: text;         /* Chrome, Firefox, v.v. */
+
+        /* Bật lại menu copy/paste khi nhấn giữ */
+        -webkit-touch-callout: default; 
+    }
+}
