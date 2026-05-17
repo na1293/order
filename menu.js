@@ -45,10 +45,10 @@ menu = {
             "image": "img/rice.webP"
         },
         "2": {
-            "name": "Cơm gà",
-            "price": "30.000 VND",
-            "price_backend": 30000,
-            "description": "Cơm gà. Bạn có thể thử món này.\nBạn sẽ có cơm và gà miếng nhỏ tùy chọn theo khẩu vị.",
+            "name": "[Gợi ý] Cơm gà",
+            "price": "25.000 VND",
+            "price_backend": 25000,
+            "description": "Thành phần:\n- Cơm\n- Gà (Chính)\n- Kimchi hoặc rau ăn kèm",
             "image": "img/rice_chicken.jpg"
         }
     },
@@ -225,60 +225,18 @@ menu = {
             "image": "img/spaghetti.jpg"
         },
         "2": {
-            "name": "[Gợi ý] Mỳ 25K (1 gói)",
+            "name": "[Gợi ý] Cơm gà",
             "price": "25.000 VND",
             "price_backend": 25000,
-            "description": "Thành phần:\n- 1 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích",
-            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
+            "description": "Thành phần:\n- Cơm\n- Gà (Chính)\n- Kimchi hoặc rau ăn kèm",
+            "image": "img/rice_chicken.jpg"
         },
         "3": {
-            "name": "[Gợi ý] Mỳ 30K (1 gói)",
-            "price": "30.000 VND",
-            "price_backend": 30000,
-            "description": "Thành phần:\n- 1 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Thịt nướng\n- Viên cá",
-            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
-        },
-        "4": {
-            "name": "[Gợi ý] Mỳ 30K (2 gói)",
-            "price": "30.000 VND",
-            "price_backend": 30000,
-            "description": "Thành phần:\n- 2 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá",
-            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
-        },
-        "5": {
-            "name": "[Gợi ý] Mỳ 35K (1 gói)",
-            "price": "35.000 VND",
-            "price_backend": 35000,
-            "description": "Thành phần:\n- 1 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá\n- Thịt nướng\n- Chọn thêm Topping",
-            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
-        },
-        "6": {
-            "name": "[Gợi ý] Mỳ 35K (2 gói)",
-            "price": "35.000 VND",
-            "price_backend": 35000,
-            "description": "Thành phần:\n- 2 gói mỳ (Tùy chọn vị)\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá\n- Thịt nướng",
-            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
-        },
-        "7": {
-            "name": "[Gợi ý] Cơm trộn 25K",
+            "name": "[Gợi ý] Cơm trộn",
             "price": "25.000 VND",
             "price_backend": 25000,
-            "description": "Thành phần:\n- Cơm trắng\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích",
-            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
-        },
-        "8": {
-            "name": "[Gợi ý] Cơm trộn 30K",
-            "price": "30.000 VND",
-            "price_backend": 30000,
-            "description": "Thành phần:\n- Cơm trắng\n- Gà chiên miếng nhỏ\n- Trứng\n- Các loại rau\n- Xúc xích\n- Viên cá",
-            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
-        },
-        "9": {
-            "name": "[Gợi ý] Mỳ kimchi thịt nướng",
-            "price": "25.000 VND",
-            "price_backend": 25000,
-            "description": "Thành phần:\n- Mỳ\n- Thịt nướng\n- Nấm kim châm\n- Trứng",
-            "image": "https://dummyimage.com/300x300/ff7f00/fff.png&text=Chưa+có+ảnh"
-        },
+            "description": "Thành phần:\n- Cơm\n- Gà chiên\n- Kimchi hoặc rau ăn kèm\n- Xúc xích\n- Rong biển\n- Trứng",
+            "image": "img/rice-tron.jpg"
+        }
     }
 }
